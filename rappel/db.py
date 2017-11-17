@@ -30,3 +30,10 @@ class db:
 		self.conn.commit()
 
 
+	def read_all(self):
+		return self.conn.execute('select * from results').fetchall()
+
+	def read_field(self, field):
+		query ='select ' + field + ' from results'
+		return self.conn.execute(query).fetchall()
+

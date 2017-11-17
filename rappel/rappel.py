@@ -51,10 +51,6 @@ class table_rappel:
 		return self.words[index]
 
 
-
-
-
-
 def read_input_between_min_max(description, min_value, max_value, default_value):
 	try:
 		value = int(input("{} [{} - {}] default ({}) : ".format(description, min_value, max_value, default_value)))
@@ -82,6 +78,8 @@ def read_input_for_game(word_count):
 
 
 if __name__ == "__main__":
+	# import sys
+	# print("arguments " + sys.argv[0])
 	myTable = table_rappel("data/table.csv")
 
 	params = read_input_for_game(myTable.get_word_count())
